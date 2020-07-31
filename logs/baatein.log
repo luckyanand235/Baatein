@@ -1,0 +1,27 @@
+2020-07-23 08:24:08,320 INFO: Baatein shuru ho gai hain.. in C:\Forks\Baatein\baatein\app\__init__.py: 69
+2020-07-23 08:24:15,442 INFO: Baatein shuru ho gai hain.. in C:\Forks\Baatein\baatein\app\__init__.py: 69
+2020-07-23 14:13:14,178 INFO: Baatein shuru ho gai hain.. in C:\Forks\Baatein\baatein\app\__init__.py: 69
+2020-07-23 15:11:04,429 INFO: Baatein shuru ho gai hain.. in C:\Forks\Baatein\baatein\app\__init__.py: 69
+2020-07-23 15:15:05,939 INFO: Baatein shuru ho gai hain.. in C:\Forks\Baatein\baatein\app\__init__.py: 69
+2020-07-23 15:15:15,514 ERROR: Exception on /reset_password_request [POST] in c:\forks\baatein\venv\lib\site-packages\flask\app.py: 1891
+Traceback (most recent call last):
+  File "c:\forks\baatein\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\forks\baatein\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\forks\baatein\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\forks\baatein\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\forks\baatein\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\forks\baatein\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Forks\Baatein\baatein\app\routes.py", line 239, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Forks\Baatein\baatein\app\util\email.py", line 19, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "C:\Forks\Baatein\baatein\app\models.py", line 96, in get_reset_password_token
+    {'reset_password': self.id, 'exp': time() + expires_in},
+NameError: name 'time' is not defined
+2020-07-23 15:16:10,136 INFO: Baatein shuru ho gai hain.. in C:\Forks\Baatein\baatein\app\__init__.py: 69
